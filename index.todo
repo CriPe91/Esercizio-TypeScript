@@ -1,0 +1,32 @@
+1-Spiegazione generica (Cos'è, a cosa serve, che problema risolve, differenze con JS)
+
+Typesscript è un linguaggio costruito su javascript, serve ad aggiungere delle funzionalità come quella di poter fornire parametri di tipo e poter snellire i blocchi di codice, attraverso typescript avremmo evidenziati gli errori in modo diverso da javascript, inoltre non può essere eseguito dal browser e node.js.
+La differenza tra i due è che javascriptè dinamico mentre typescript è statico.
+
+2-Type inference
+
+Quando la variabile viene inizializzata, andiamo ad assegnargli un valore ad esempio let myVar : number , abbiamo assegnato un tipo number al contenitore myVar
+
+3-Il tipo ‘any’
+
+Quando forniamo il tipo any, ammette tutti i tipi di dato, ad esempio un aray vuoto per riempirlo potremmo utilizzare any non sapendo cosa va messo al suo interno -> any[]=["",number,booleano]
+
+4-Il tipo Union
+Unione di due o più tipi assegnabili ad un qualche contenitore di valore
+Ad esempio -> let persona : string|booleano
+
+5-Le Interfaces in TS
+Sono contenitori di definizione di tipi per gli oggetti con la funzionalità di estensione
+
+6-I generics
+In TypeScript, i generics sono un meccanismo che permette di definire funzioni, classi o interfacce che operano su tipi variabili. Invece di specificare un tipo concreto, si usa un tipo parametrizzato che può essere determinato al momento dell'uso. Questo rende il codice più riutilizzabile e flessibile, consentendo di lavorare con vari tipi senza perdere la sicurezza dei tipi.
+
+Esempio di funzione generica:
+typescript
+Copia codice
+function identita<T>(arg: T): T {
+return arg;
+}
+
+const numero = identita(5); // T è inferito come 'number'
+const parola = identita("ciao"); // T è inferito come 'string'
